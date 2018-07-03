@@ -1,0 +1,55 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MapsActivity2">
+
+    <RelativeLayout
+        android:id="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <EditText
+            android:id="@+id/startplace"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="start place"/>
+
+        <EditText
+            android:id="@+id/endplace"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/startplace"
+            android:hint="End place"/>
+
+        <Button
+            android:id="@+id/searchbutton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/endplace"
+            android:text="Single search"/>
+
+        <Button
+            android:id="@+id/searchbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/searchbutton"
+            android:text="Draw Path"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchlayout">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>
